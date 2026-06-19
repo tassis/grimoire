@@ -1,0 +1,23 @@
+{
+  "skill_name": "db-design-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review these Postgres migrations and tell me whether the schema split is reasonable. We built one queue table per downstream integration and now each table repeats status, retry_count, available_at, receipt_handle, payload, created_at, updated_at. I mostly want critique, not a redesign. If the schema alone is not enough, say what story or workflow context you still need.",
+      "expected_output": "Triggers the skill and emphasizes executive summary, context limits, domain-story reconstruction, schema split review, and the repeated-column anti-pattern.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have a chartdb ERD for a booking platform. Can you inspect whether the database design matches the domain well, especially the boundary between reservation lifecycle tables and provider-specific extension tables? Please first explain what story you think the data model is telling before you judge it.",
+      "expected_output": "Triggers the skill and reviews requirement fit, reconstructed domain story, boundary clarity, and whether infra/core plus extension-table modeling is appropriate.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Help me fix this SQL syntax error in a MariaDB migration: it says there is an error near GENERATED ALWAYS AS.",
+      "expected_output": "Should not trigger the skill because this is syntax troubleshooting, not DB design review.",
+      "files": []
+    }
+  ]
+}
