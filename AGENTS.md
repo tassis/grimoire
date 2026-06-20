@@ -16,22 +16,23 @@ Use a flat, self-contained skill layout.
 ```text
 <repo-root>/
   AGENTS.md
-  <skill-name>/
-    SKILL.md
-  <skill-name>/
-    SKILL.md
+  skills/
+    <skill-name>/
+      SKILL.md
+    <skill-name>/
+      SKILL.md
 ```
 
 Rules:
 
-- Each top-level skill directory is one installable unit.
+- Each directory under `skills/` is one installable unit.
 - Each skill directory must contain its own `SKILL.md`.
 - Do not introduce shared dependency folders like `_shared/`, `common/`, or cross-skill includes.
 - A skill must remain useful when copied or installed by itself.
 
 ## Authoring rules
 
-- Prefer **flat top-level directories** over nested category trees.
+- Prefer **flat directories under `skills/`** over nested category trees.
 - Use **kebab-case** for skill directory names.
 - Keep every skill **self-contained**.
 - If a skill needs helper files later, keep them inside that skill's own directory.
