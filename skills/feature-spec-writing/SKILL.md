@@ -84,16 +84,9 @@ The draft should default to this structure:
 
 The output should make it easy to review the feature from a product and validation perspective, not only from an engineering perspective.
 
-## Working posture
+## Working approach
 
-### 1. Recover context first
-
-Before drafting, identify what is already known from:
-
-- direct user statements;
-- existing docs or tickets;
-- current code behavior;
-- inferred project context.
+Before drafting, recover what is already known from user statements, docs, tickets, code behavior, and project context.
 
 Separate clearly between:
 
@@ -101,33 +94,14 @@ Separate clearly between:
 - inferred assumptions;
 - unresolved questions.
 
-### 2. Ask only high-value questions
+Ask only a small number of targeted questions where ambiguity would materially change the document, then draft early and refine iteratively.
 
-Do not stall the whole task by interrogating the user for every missing detail.
-
-Instead:
-
-1. recover what can be learned from available inputs;
-2. ask a small number of targeted questions only where ambiguity materially changes the document;
-3. draft early;
-4. refine iteratively.
-
-High-value question areas often include:
-
-- what outcome the feature is meant to achieve;
-- what is explicitly out of scope;
-- who uses the feature or in what situation it appears;
-- where expected behavior is still ambiguous;
-- which failures matter enough to call out.
-
-### 3. Support two source modes
-
-This skill should support:
+This skill should support both:
 
 - **forward-writing**: from requirements, notes, or tickets into a fresh feature spec draft;
 - **reverse-writing**: from existing code, docs, or implemented behavior into a feature-facing document.
 
-### 4. Stay feature-facing
+## Stay feature-facing
 
 The document should emphasize:
 
@@ -144,41 +118,10 @@ When backfilling from existing implementation, do not assume the current code fu
 
 ## Important section guidance
 
-### Overview
-
-Briefly explain what the feature is, why it exists, and what larger context matters.
-
-### Goals
-
-State what the feature is trying to achieve in this iteration.
-
-### Non-Goals
-
-State what this feature intentionally does not solve, cover, or change.
-
-### Usage Context
-
-Describe when the feature is encountered, who uses it, and what surrounding workflow matters.
-
-### Expected Behavior
-
-Describe what should happen in normal usage. Favor concrete behavior over abstract promises.
-
-### Error Scenarios
-
-Describe meaningful failure conditions, invalid states, rejection paths, or user-visible error outcomes.
-
-### Edge Cases
-
-Use this only when special-case behavior matters enough to call out separately.
-
-### Known Issues
-
-Use this when there are current limitations, acknowledged gaps, or behavior caveats that reviewers should know.
-
-### Open Questions
-
-Use this when decisions remain unresolved and would materially affect scope, behavior, or follow-up work.
+- **Overview / Goals / Non-Goals** should make the feature intent and explicit boundary easy to review.
+- **Usage Context** should explain where the feature appears and who encounters it.
+- **Expected Behavior / Error Scenarios** should favor concrete behavior and meaningful failure outcomes over abstract promises.
+- **Known Issues / Open Questions** should preserve current limits and unresolved decisions instead of smoothing them away.
 
 ## Acceptance-criteria rule
 

@@ -84,17 +84,9 @@ The draft should default to this structure:
 
 The output should help engineers understand internal behavior and maintenance-relevant facts, not just restate product-facing scope.
 
-## Working posture
+## Working approach
 
-### 1. Recover implementation context first
-
-Before drafting, identify what is already known from:
-
-- direct user statements;
-- feature specs or prior docs;
-- current code behavior;
-- logs or observed runtime behavior;
-- inferred system structure.
+Before drafting, recover what is already known from user statements, feature specs, prior docs, code behavior, logs, and inferred system structure.
 
 Separate clearly between:
 
@@ -102,33 +94,14 @@ Separate clearly between:
 - inferred assumptions;
 - unresolved questions.
 
-### 2. Ask only high-value questions
+Ask only a small number of targeted questions where ambiguity would materially change the document, then draft early and refine iteratively.
 
-Do not block the task on exhaustive discovery.
-
-Instead:
-
-1. recover what can be learned from available inputs and repository inspection;
-2. ask a small number of targeted questions only where ambiguity materially changes the document;
-3. draft early;
-4. refine iteratively.
-
-High-value question areas often include:
-
-- what the true flow boundaries are;
-- which modules own important responsibilities;
-- what state changes are intentional versus incidental;
-- where error handling is incomplete or ambiguous;
-- which constraints or tradeoffs are deliberate.
-
-### 3. Support two source modes
-
-This skill should support:
+This skill should support both:
 
 - **forward-writing**: from specs, notes, and implementation plans into a technical document draft;
 - **reverse-writing**: from existing code, logs, behavior, or partial docs into an engineering-facing technical document.
 
-### 4. Stay engineering-facing
+## Stay engineering-facing
 
 The document should emphasize:
 
@@ -146,47 +119,10 @@ When backfilling from existing implementation, do not assume the current code is
 
 ## Important section guidance
 
-### Overview
-
-Briefly explain what feature or technical area this document covers.
-
-### Relationship
-
-Link the document to the related feature spec, feature scope, ticket, or implementation context. If no formal feature spec exists, explain what source of truth this document is anchored to.
-
-This section should anchor context, not restate the whole feature spec.
-
-### Flow Overview
-
-Describe the main end-to-end flow at a level that makes the rest of the document easier to follow.
-
-### Components Involved
-
-Identify the main modules, services, jobs, components, or layers involved, and briefly state their roles.
-
-### Data and State Flow
-
-Describe what data enters the flow, how it changes, what state transitions matter, and what dependencies influence later behavior.
-
-### Error Handling
-
-Describe major failure paths, propagation behavior, recovery logic, fallback behavior, and any important user-visible consequences.
-
-### Dependencies and Integration Points
-
-Describe external services, internal subsystems, events, storage, APIs, configuration, or permissions that materially affect the feature.
-
-### Constraints and Tradeoffs
-
-Describe meaningful technical limits, deliberate compromises, or design decisions that shape the implementation.
-
-### Known Risks / Known Issues
-
-Use this for implementation risks, maintenance risks, technical debt, behavioral gaps, or other known concerns that should not be hidden.
-
-### Open Questions
-
-Use this when implementation details, boundaries, ownership, or follow-up design decisions remain unresolved.
+- **Relationship** should anchor the document to the related feature spec, ticket, scope, or implementation context without restating the whole feature spec.
+- **Flow Overview** should make the end-to-end path easy to follow before the details.
+- **Data and State Flow / Error Handling** should explain how the system changes over time and how failures move through it.
+- **Constraints, Known Risks, and Open Questions** should preserve meaningful limits, debt, and unresolved design issues instead of hiding them.
 
 ## Constraints and anti-patterns
 

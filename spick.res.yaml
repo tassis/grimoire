@@ -1,14 +1,17 @@
 version: 1
 kind: resources
+plugin: null
 resources:
-  skills:
-    - id: careful-implementation
-      path: skills/careful-implementation
-    - id: compact-skill-authoring
-      path: skills/compact-skill-authoring
-    - id: document-polishing
-      path: skills/document-polishing
-    - id: feature-spec-writing
-      path: skills/feature-spec-writing
-    - id: technical-document-writing
-      path: skills/technical-document-writing
+    skills:
+        - id: document-polishing
+          path: skills/document-polishing
+        - id: feature-spec-writing
+          path: skills/feature-spec-writing
+        - id: project-guidance-authoring
+          path: skills/project-guidance-authoring
+        - id: technical-document-writing
+          path: skills/technical-document-writing
+        - id: careful-implementation
+          path: skills/careful-implementation
+        - id: compact-skill-authoring
+          path: skills/compact-skill-authoring

@@ -18,13 +18,7 @@ The expected pattern is:
 
 ## Use this skill when
 
-Use this skill when the user wants help with any of the following:
-
-- creating a new skill;
-- turning a rough behavioral idea into a reusable skill;
-- designing a narrowly scoped judgment, capability, or writing skill;
-- tightening an existing skill that feels too broad, too long, or too workflow-heavy;
-- authoring a skill that should be compact, reusable, and easy to install.
+Use this skill when the user wants help creating a new skill, turning a rough behavioral idea into a reusable skill, or tightening an existing skill that feels too broad, too long, or too workflow-heavy.
 
 Typical requests may sound like:
 
@@ -35,13 +29,7 @@ Typical requests may sound like:
 
 ## Do not use this skill when
 
-Do not use this skill when the main need is:
-
-- running a full eval/benchmark/review loop for a mature skill set;
-- installing or packaging a completed skill without changing its design;
-- creating a workflow-orchestration system rather than a compact skill;
-- generating a giant reference-heavy handbook skill;
-- skipping user context gathering when the intended behavior is still ambiguous.
+Do not use this skill when the main need is running a full eval/benchmark/review loop for a mature skill set, installing or packaging a completed skill without changing its design, creating a workflow-orchestration system, generating a giant reference-heavy handbook skill, or skipping user context gathering when the intended behavior is still ambiguous.
 
 In those cases, a broader skill-creation or workflow tool should own the work.
 
@@ -104,9 +92,7 @@ Prefer instructions that improve behavior at many future uses, not just one curr
 
 Treat the frontmatter description as a trigger contract, not just a summary. It should describe both what the skill does and the situations where it should load.
 
-Do not assume the output must live in any one fixed installation path or repository layout.
-
-If the user already has a repository structure or target directory convention, follow that. Otherwise stay path-neutral and focus on the skill content first.
+Do not assume any one fixed installation path or repository layout. If the user already has a repository structure or target directory convention, follow that. Otherwise stay path-neutral and focus on the skill content first.
 
 ## Section structure guidance
 
@@ -130,15 +116,7 @@ However, do use a **light fixed skeleton** so the result does not become vague o
 - output structure or report template;
 - examples.
 
-The goal is not full uniformity.
-
-The goal is to keep every skill:
-
-- bounded;
-- triggerable;
-- self-contained;
-- readable;
-- not heavier than necessary.
+The goal is not full uniformity. The goal is to keep every skill bounded, triggerable, self-contained, readable, and not heavier than necessary.
 
 ## Preferred targets and common failures
 
@@ -158,13 +136,7 @@ Use this sequence:
 6. draft the skill;
 7. do one final compression-and-clarity pass.
 
-That final pass should:
-
-- remove repetition;
-- sharpen trigger language;
-- improve readability;
-- preserve the intended boundary and leverage;
-- stop short of turning the task into pure editorial cleanup when real scope correction is still needed.
+That final pass should remove repetition, sharpen trigger language, improve readability, preserve the intended boundary and leverage, and stop short of turning the task into pure editorial cleanup when real scope correction is still needed.
 
 ## Good result characteristics
 
